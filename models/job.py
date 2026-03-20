@@ -19,7 +19,7 @@ class Job(BaseModel):
         if not v:
             raise ValueError("Field cannot be empty")
         return v
-
+    
     @field_validator('scraped_at', mode='before')
     @classmethod
     def set_scraped_at(cls, v):
